@@ -38,11 +38,11 @@ projects[ctools][subdir] = "contrib"
 projects[context][version] = "3.0-beta6"
 projects[context][subdir] = "contrib"
 
-; We are currently using a fork of the Chosen module located in the install
-; profile to support the select_or_other integration.
-; @see http://drupal.org/sandbox/davereid/2029921
-;projects[chosen][version] = "2.0-alpha2"
-;projects[chosen][subdir] = "contrib"
+projects[chosen][version] = "2.0-beta2"
+projects[chosen][subdir] = "contrib"
+; Add support for the koenpunt fork of Chosen with supports adding options
+; @see https://drupal.org/node/2012900
+projects[chosen][patch][] = "https://drupal.org/files/issues/2012900-chosen-select-or-other_0.patch"
 
 projects[custom_breadcrumbs][version] = "2.0-alpha3"
 projects[custom_breadcrumbs][subdir] = "contrib"
@@ -65,6 +65,7 @@ projects[date][patch][] = "http://drupal.org/files/2034231-date-migration-consol
 projects[date_facets][version] = "1.x-dev"
 projects[date_facets][subdir] = "contrib"
 
+; Dev relese is ok here.
 projects[devel][version] = "1.x-dev"
 projects[devel][subdir] = "contrib"
 
@@ -98,7 +99,7 @@ projects[entity][subdir] = "contrib"
 ; @see https://drupal.org/node/1780646
 projects[entity][patch][] = "http://drupal.org/files/entity-entity_access-1780646-107.patch"
 
-projects[entitycache][version] = "1.x-dev"
+projects[entitycache][version] = "1.2"
 projects[entitycache][subdir] = "contrib"
 
 projects[entityreference][version] = "1.0"
@@ -184,6 +185,7 @@ projects[libraries][subdir] = "contrib"
 projects[link][version] = "1.1"
 projects[link][subdir] = "contrib"
 
+; Dave Reid maintains this, ok to use dev for now.
 projects[media][version] = "2.x-dev"
 projects[media][subdir] = "contrib"
 
@@ -198,6 +200,9 @@ projects[migrate][patch][] = "http://drupal.org/files/2037265-migrate-static-reg
 ; Fix page titles and breadcrumbs in the UI
 ; @see https://drupal.org/node/2040101
 projects[migrate][patch][] = "http://drupal.org/files/2040101-breadcrumb-titles.patch"
+; Fix preserve file type
+; @see https://drupal.org/node/2039649
+projects[migrate][patch][] = "http://drupal.org/files/issues/migrate.file-mimetype.2039649-14.patch"
 
 projects[migrate_d2d][version] = "2.x-dev"
 projects[migrate_d2d][subdir] = "contrib"
@@ -367,10 +372,9 @@ libraries[flexslider][download][subtree] = "FlexSlider-master"
 libraries[flexslider][directory_name] = "flexslider"
 
 ; Currently using a fork of the Chosen module that includes the Chosen library.
-;libraries[chosen][download][type] = "get"
-;libraries[chosen][download][url] = "https://github.com/koenpunt/chosen/archive/option_adding.zip"
-;libraries[chosen][download][subtree] = "chosen-option_adding"
-;libraries[chosen][directory_name] = "chosen"
+libraries[chosen][download][type] = "get"
+libraries[chosen][download][url] = "https://github.com/koenpunt/chosen/releases/download/v1.1.0/chosen_v1.1.0.zip"
+libraries[chosen][directory_name] = "chosen"
 
 libraries[superfish][download][type] = "get"
 libraries[superfish][download][url] = "https://github.com/mehrpadin/Superfish-for-Drupal/archive/1.x.zip"
