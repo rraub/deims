@@ -15,16 +15,6 @@ function deims_token_info() {
     'description' => '',
   );
 
-  $info['tokens']['node']['field_data_set_id'] = array(
-    'name' => t('Dataset ID'),
-    'description' => '',
-  );
-
-  $info['tokens']['node']['field_eml_revision_id'] = array(
-    'name' => t('Revision number'),
-    'description' => '',
-  );
-
   return $info;
 }
 
